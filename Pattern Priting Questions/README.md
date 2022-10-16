@@ -14,6 +14,8 @@ Patterns which are like:-
 
 3. Diamond types, in Diamond.cpp
 
+4. Misc.cpp more different pattterns
+
 ![Screenshot from 2022-10-12 11-36-50](https://user-images.githubusercontent.com/78020902/195263207-76d2446d-3a32-4971-961c-78377cf43942.png)
 ![Screenshot from 2022-10-12 11-38-04](https://user-images.githubusercontent.com/78020902/195263259-d6de6c7c-b015-4062-8f8e-9276f2c282d6.png)
 ![Screenshot from 2022-10-12 11-38-17](https://user-images.githubusercontent.com/78020902/195263295-512306d1-82cf-4895-b359-cd033cedfc01.png)
