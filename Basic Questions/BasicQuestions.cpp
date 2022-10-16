@@ -55,5 +55,33 @@ int main() {
         row++;
     }
 
+
+    cout<<endl<<"Number Star pattern 2"<<endl;
+    int col = 0, row = 0;
+    cin >> n * 2;
+    while(row < n) {
+        col = 0;
+        while(col < n) {
+            if(col >= n - row)
+                cout<<"*";
+            else 
+                cout<<col + 1;
+            col++;
+        } 
+        
+        col = 0;
+        while(col < n) {
+            if(col < row) {
+                cout<<"*";
+            } else {
+                cout<<n - col;
+            }
+            col++;
+        }
+        
+        cout<<endl;
+        row++;
+    }
+
     return 0;
 }
