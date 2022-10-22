@@ -64,3 +64,19 @@ let anCircle = new AnotherCircle(2);
 console.log('before: ', anCircle.radius)
 anCircle.radius = 10;
 console.log('after: ', anCircle.radius)
+
+
+// Inheritance
+
+function Shape() {}
+
+Shape.prototype.duplicate = function() {
+    console.log('Duplicate');
+}
+
+// Circle.prototype = Object.create(Object.prototype); //Implicit Object Protype assignment
+Circle.prototype = Object.create(Shape.prototype); //Explicit Object Protype assignment
+Circle.prototype.constructor = Circle;
+
+let newCircle = new Circle(2);
+newCircle.duplicate();

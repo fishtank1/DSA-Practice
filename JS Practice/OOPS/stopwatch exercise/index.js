@@ -1,36 +1,33 @@
 function Stopwatch() {
-    let time = '000';
-    let timer;
-
-    this.start = () => {
-        console.log('started');
-        let i = 1;
-        time = parseInt(time)
-        timer = setInterval(() => {
-            // console.log(time);
-            if(i === 160) {
-                time += 1;
-                i = 0;
-            }
-            i += 1;
-        }, 0);
-    }
-
-    this.stop = () => {
-        clearInterval(timer);
-    }
-
-    this.reset = () => {
-        time = '000';
-    }
-
+    this.time = 0;
+    this.timer;
+    
     Object.defineProperty(this, 'duration', {
-        get: () => time
-    })
+        get: () => this.time
+    });
+}
+
+Stopwatch.prototype.start =  function() {
+    let i = 1;
+    this.time = parseInt(this.time)
+    this.timer = setInterval(() => {
+        if(i === 160) {
+            this.time += 1;
+            i = 0;
+        }
+        i += 1;
+    }, 0);
+};
+
+Stopwatch.prototype.stop = function() {
+    clearInterval(this.timer);
+}
+
+Stopwatch.prototype.reset = function() {
+    this.time = 0;
 }
 
 const sw = new Stopwatch();
 // sw.start();
 // sw.stop();
-console.log(sw.duration)
 // sw.reset();
