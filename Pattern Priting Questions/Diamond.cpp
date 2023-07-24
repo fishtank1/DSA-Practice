@@ -36,6 +36,6 @@ int main() {
 		row++;
 		cout<<endl;
 	}
-
+//c
 	return 0;
 }
